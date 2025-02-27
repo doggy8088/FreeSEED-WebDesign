@@ -1,0 +1,202 @@
+/* 主題顏色與動畫效果 */
+:root {
+    --primary-color: #16a34a;
+    --secondary-color: #2563eb;
+    --accent-color: #f59e0b;
+    --background-light: #f8fafc;
+  }
+  
+  /* 裝飾元素 */
+  .decoration-dot {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .floating-slower {
+    animation: float 10s ease-in-out infinite;
+  }
+  
+  .floating-reverse {
+    animation: float-reverse 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes float-reverse {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+  
+  /* 閃光效果 */
+  .shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine-effect::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    transform: rotate(30deg);
+    animation: shine 4s infinite linear;
+  }
+  
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(30deg);
+    }
+  }
+  
+  /* 波浪背景 */
+  .wave-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2316a34a' fill-opacity='0.05' d='M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,122.7C960,160,1056,224,1152,234.7C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  .wave-top {
+    top: 0;
+    transform: rotate(180deg);
+  }
+  
+  .wave-bottom {
+    bottom: 0;
+  }
+  
+  /* 卡片懸停效果 */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* 閃爍效果 */
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(22, 163, 74, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+    }
+  }
+  
+  /* 背景色塊效果 */
+  .bg-pattern-grid {
+    background-image:
+      linear-gradient(to right, rgba(22, 163, 74, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(22, 163, 74, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  /* 標題下劃線裝飾 */
+  .title-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-underline::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: -10px;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+  }
+  
+  /* 亮點圓點背景 */
+  .dotted-bg {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .dotted-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--primary-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+  /* 圖標旋轉效果 */
+  .rotate-icon {
+    transition: transform 0.5s ease;
+  }
+  
+  .rotate-icon:hover {
+    transform: rotate(15deg);
+  }
+  
+  /* 圖片光暈效果 */
+  .glow-on-hover {
+    transition: filter 0.3s ease;
+  }
+  
+  .glow-on-hover:hover {
+    filter: drop-shadow(0 0 8px rgba(22, 163, 74, 0.5));
+  }

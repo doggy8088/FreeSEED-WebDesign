@@ -3,68 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeSEED "Made In Taiwan" LLM | Home</title>
-    <meta name="description" content="「台灣製造」大型語言模型計劃 - 打造台灣自主研發的大型語言模型">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>FreeSEED - 台灣製造 LLM大型語言模型計劃</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        secondary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white shadow-lg">
-        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
-            <div class="flex items-center mb-4 md:mb-0">
-                <h1 class="text-3xl font-bold">FreeSEED</h1>
-                <span class="ml-2 bg-yellow-400 text-blue-900 px-2 py-1 rounded text-sm font-bold">Made In Taiwan</span>
+    <!-- 裝飾點 -->
+    <div class="decoration-dot w-64 h-64 -top-20 -left-20 absolute"></div>
+    <div class="decoration-dot w-96 h-96 -bottom-40 -right-40 absolute"></div>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-primary-600 text-2xl font-bold">FreeSEED</span>
+                <span class="hidden md:inline text-gray-500">|</span>
+                <span class="hidden md:inline text-sm text-gray-500">台灣製造 LLM大型語言模型計劃</span>
             </div>
-            <nav>
-                <ul class="flex flex-wrap space-x-4 md:space-x-6">
-                    <li><a href="#about" class="hover:text-yellow-300 transition-colors duration-200 hover-underline">關於計劃</a></li>
-                    <li><a href="#documents" class="hover:text-yellow-300 transition-colors duration-200 hover-underline">計劃文件</a></li>
-                    <li><a href="#tasks" class="hover:text-yellow-300 transition-colors duration-200 hover-underline">任務大廳</a></li>
-                    <li><a href="#partners" class="hover:text-yellow-300 transition-colors duration-200 hover-underline">合作夥伴</a></li>
-                    <li><a href="#news" class="hover:text-yellow-300 transition-colors duration-200 hover-underline">新聞報導</a></li>
-                    <li><a href="#contact" class="hover:text-yellow-300 transition-colors duration-200 hover-underline">聯絡我們</a></li>
-                </ul>
-            </nav>
+            <div class="flex items-center space-x-6">
+                <a href="#about" class="hidden md:inline hover:text-primary-600 transition-colors duration-200">關於計劃</a>
+                <a href="#documents" class="hidden md:inline hover:text-primary-600 transition-colors duration-200">計劃文件</a>
+                <a href="#tasks" class="hidden md:inline hover:text-primary-600 transition-colors duration-200">任務大廳</a>
+                <a href="#partners" class="hidden md:inline hover:text-primary-600 transition-colors duration-200">合作夥伴</a>
+                <a href="#news" class="hidden md:inline hover:text-primary-600 transition-colors duration-200">新聞報導</a>
+                <a href="#contact" class="hidden md:inline hover:text-primary-600 transition-colors duration-200">聯絡我們</a>
+                <button id="mobileMenuToggle" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="#about" class="py-2 hover:text-primary-600 transition-colors duration-200">關於計劃</a>
+                <a href="#documents" class="py-2 hover:text-primary-600 transition-colors duration-200">計劃文件</a>
+                <a href="#tasks" class="py-2 hover:text-primary-600 transition-colors duration-200">任務大廳</a>
+                <a href="#partners" class="py-2 hover:text-primary-600 transition-colors duration-200">合作夥伴</a>
+                <a href="#news" class="py-2 hover:text-primary-600 transition-colors duration-200">新聞報導</a>
+                <a href="#contact" class="py-2 hover:text-primary-600 transition-colors duration-200">聯絡我們</a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="py-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80');">
-        <div class="container mx-auto px-4 relative section-animate">
-            <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-xl max-w-2xl animate-fade-in">
-                <h2 class="text-4xl font-bold mb-6 text-blue-800">「台灣製造」 LLM大型語言模型計劃</h2>
-                <p class="text-lg mb-8">打造台灣自主研發的大型語言模型，培育本土AI人才，推動台灣AI技術發展</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#documents" class="btn-gradient text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                        查看計劃書
-                    </a>
-                    <a href="#tasks" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                        加入計劃
-                    </a>
+    <section class="hero-pattern pt-28 pb-16 md:pt-32 md:pb-20 wave-container relative overflow-hidden">
+        <div class="wave wave-top"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 title-underline">FreeSEED</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-primary-600 mb-6">「台灣製造」 LLM大型語言模型計劃</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        我們致力於打造台灣自製的大型語言模型，促進本土AI發展，提升台灣在全球AI領域的競爭力。
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#documents" class="btn-primary pulse">
+                            瞭解計劃詳情
+                        </a>
+                        <a href="#tasks" class="btn-secondary">
+                            加入我們
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center relative">
+                    <img src="https://img.freepik.com/free-vector/ai-technology-brain-background-vector-digital-transformation-concept_53876-117812.jpg" alt="FreeSEED Project" class="rounded-lg shadow-lg max-w-full h-auto shine-effect" />
+
+                    <!-- 浮動裝飾元素 -->
+                    <div class="absolute top-1/4 left-1/3 hidden md:block">
+                        <div class="bg-blue-500 bg-opacity-10 rounded-full w-20 h-20 floating-slow"></div>
+                    </div>
+                    <div class="absolute bottom-1/4 right-1/4 hidden md:block">
+                        <div class="bg-green-500 bg-opacity-10 rounded-full w-16 h-16 floating"></div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="wave wave-bottom"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white section-animate">
+    <section id="about" class="py-16 bg-white dotted-bg">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">關於FreeSEED計劃</h2>
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="w-full md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80" alt="AI Technology" class="rounded-lg shadow-lg w-full">
-                </div>
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-4">台灣自主研發的大型語言模型</h3>
-                    <p class="mb-4">FreeSEED計劃致力於建立台灣自主研發的大型語言模型（LLM），旨在培育本土AI人才，推動台灣AI技術發展。</p>
-                    <p class="mb-6">我們相信，透過集結台灣的技術力量和資源，可以打造出符合台灣需求且具國際競爭力的AI語言模型。</p>
-                    <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
-                        <div class="text-blue-600">
-                            <i class="fas fa-lightbulb text-2xl"></i>
+            <h2 class="text-3xl font-bold mb-12 text-center title-underline">關於FreeSEED計劃</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-600 mb-6">
+                    FreeSEED計劃是一個由台灣人發起的開放原始碼項目，旨在建立台灣自製的大型語言模型。我們相信，透過本土語言模型的開發，能更好地理解及保存台灣的語言文化、提升台灣AI技術的自主性，並促進相關產業的創新發展。
+                </p>
+                <p class="text-lg text-gray-600 mb-6">
+                    我們的目標是結合台灣學術界及產業界的力量，打造一個具有台灣特色的LLM，特別專注於對繁體中文及台灣本土語言的優化支援。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon rotate-icon">
+                            <i class="fas fa-code text-primary-500"></i>
                         </div>
-                        <p class="italic">透過開放合作，共同培育台灣AI生態系統，建立台灣在全球AI領域的關鍵地位。</p>
+                        <h3 class="text-xl font-semibold mb-3">開放原始碼</h3>
+                        <p class="text-gray-600">
+                            我們以開放原始碼的方式進行開發，歡迎各界參與貢獻，共同打造台灣的AI未來。
+                        </p>
+                    </div>
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon rotate-icon">
+                            <i class="fas fa-language text-primary-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">本土文化優化</h3>
+                        <p class="text-gray-600">
+                            專為台灣語言及文化特色優化，能更好地理解台灣特有的語境與表達方式。
+                        </p>
+                    </div>
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon rotate-icon">
+                            <i class="fas fa-users text-primary-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">社群共建</h3>
+                        <p class="text-gray-600">
+                            結合學術界、產業界及開發者社群的力量，共同為台灣AI發展貢獻資源與智慧。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -72,166 +171,244 @@
     </section>
 
     <!-- Documents Section -->
-    <section id="documents" class="py-16 bg-gray-100 section-animate">
+    <section id="documents" class="py-16 bg-gray-50 wave-container relative">
+        <div class="wave wave-top"></div>
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">計劃書與常見問答集</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 card-hover">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-file-alt text-4xl"></i>
+            <h2 class="text-3xl font-bold mb-12 text-center title-underline">計劃書與文件</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="document-card hover-lift">
+                    <div class="document-icon rotate-icon">
+                        <i class="fas fa-file-alt text-primary-500"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">計劃書</h3>
-                    <p class="text-gray-600 mb-4">「台灣製造」大型語言模型計劃的詳細介紹，包含計劃目標、執行方式、資源需求等。</p>
-                    <a href="https://docs.google.com/document/d/1DxfceB9e2t6DA1LmUrIIVRzbNIOrJ9u-oSqg86Ji9cM/edit?usp=sharing" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                        查看完整計劃書
-                        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
+                    <p class="text-gray-600 mb-4">
+                        詳細瞭解FreeSEED計劃的願景、目標、實施方法及預期成果。
+                    </p>
+                    <a href="https://docs.google.com/document/d/1DxfceB9e2t6DA1LmUrIIVRzbNIOrJ9u-oSqg86Ji9cM/edit?usp=sharing" target="_blank" class="btn-outline">
+                        查看計劃書
                     </a>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 card-hover">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-question-circle text-4xl"></i>
+                <div class="document-card hover-lift">
+                    <div class="document-icon rotate-icon">
+                        <i class="fas fa-question-circle text-primary-500"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">常見問答集</h3>
-                    <p class="text-gray-600 mb-4">關於計劃的常見問題解答，幫助您了解更多關於計劃的詳情。</p>
-                    <a href="https://docs.google.com/document/d/12Xv7Cj2eLQN3RPRJhcvAV-b0Zbo-OIxuIzCyK68aP44/edit?usp=sharing" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                        查看常見問答集
-                        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
+                    <p class="text-gray-600 mb-4">
+                        解答關於FreeSEED計劃的常見問題，幫助您更好地瞭解計劃內容及參與方式。
+                    </p>
+                    <a href="https://docs.google.com/document/d/12Xv7Cj2eLQN3RPRJhcvAV-b0Zbo-OIxuIzCyK68aP44/edit?usp=sharing" target="_blank" class="btn-outline">
+                        查看FAQ
                     </a>
                 </div>
             </div>
         </div>
+        <div class="wave wave-bottom"></div>
     </section>
 
     <!-- Tasks Section -->
-    <section id="tasks" class="py-16 bg-white section-animate">
+    <section id="tasks" class="py-16 bg-white bg-pattern-grid">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">任務大廳</h2>
-            <div class="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-md p-8 card-hover">
-                <div class="flex items-start mb-6">
-                    <div class="text-blue-600 mr-4">
-                        <i class="fas fa-tasks text-4xl"></i>
+            <h2 class="text-3xl font-bold mb-12 text-center title-underline">任務大廳</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-600 mb-8 text-center">
+                    看完計劃書、問答集，想要幫忙嗎？看看我們需要什麼幫忙，再決定要不要加入 Discord
+                </p>
+                <div class="task-card hover-lift">
+                    <div class="task-content">
+                        <h3 class="text-xl font-semibold mb-3">參與FreeSEED計劃</h3>
+                        <p class="text-gray-600 mb-4">
+                            我們需要不同專業領域的人才參與，包括但不限於AI研究員、軟體工程師、語言學家、資料科學家等。查看任務大廳，找到適合您的貢獻方式！
+                        </p>
+                        <a href="https://docs.google.com/document/d/1I_NXhxXI16HOwPD_P_qyUvgdnQAGPzwqqdSEffF_eBE/edit?usp=sharing" target="_blank" class="btn-primary">
+                            <i class="fas fa-hand-point-right mr-2"></i> 查看任務大廳
+                        </a>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-2">如何參與計劃</h3>
-                        <p class="text-gray-700">看完計劃書、問答集，想要幫忙嗎？來看看我們需要什麼幫助，再決定要不要加入 Discord。</p>
+                    <div class="task-image">
+                        <img src="https://img.freepik.com/free-vector/team-working-together-teamwork-concept_74855-6671.jpg" alt="Join FreeSEED" class="rounded-lg shadow-md glow-on-hover" />
                     </div>
                 </div>
-                <a href="https://docs.google.com/document/d/1I_NXhxXI16HOwPD_P_qyUvgdnQAGPzwqqdSEffF_eBE/edit?usp=sharing" target="_blank" class="block w-full btn-gradient text-white text-center font-semibold py-3 px-6 rounded-lg transition-colors duration-200 mt-6">
-                    👉 查看「台灣製造」大型語言模型計劃 | 任務大廳
-                </a>
-                <div class="mt-6 bg-white p-4 rounded-lg border border-gray-200">
-                    <p class="text-sm text-gray-600">加入我們，無論您是語言學專家、程式開發者、資料科學家，或對AI發展有熱情的任何人，都能在這裡找到適合的貢獻方式。</p>
+
+                <!-- 新增任務卡片 -->
+                <div class="task-card hover-lift mt-8">
+                    <div class="task-content">
+                        <h3 class="text-xl font-semibold mb-3">加入Discord社群</h3>
+                        <p class="text-gray-600 mb-4">
+                            加入我們的Discord社群，與其他對FreeSEED計劃感興趣的夥伴交流討論，接收最新計劃動態，共同協作打造台灣的大型語言模型。
+                        </p>
+                        <a href="https://discord.com" target="_blank" class="btn-primary">
+                            <i class="fab fa-discord mr-2"></i> 加入Discord
+                        </a>
+                    </div>
+                    <div class="task-image">
+                        <img src="https://img.freepik.com/free-vector/online-community-communicating-through-digital-devices_74855-5471.jpg" alt="Join Discord" class="rounded-lg shadow-md glow-on-hover" />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Partners Section -->
-    <section id="partners" class="py-16 bg-gray-100 section-animate">
+    <section id="partners" class="py-16 bg-gray-50 wave-container relative">
+        <div class="wave wave-top"></div>
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">訓練資料授權合作夥伴</h2>
-            <div class="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto card-hover">
-                <div class="flex flex-col items-center mb-6">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-handshake text-5xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-center">資料授權合作夥伴</h3>
+            <h2 class="text-3xl font-bold mb-12 text-center title-underline">訓練資料授權合作夥伴</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-600 mb-8 text-center">
+                    我們感謝以下合作夥伴提供寶貴的訓練資料，支持FreeSEED計劃的發展。
+                </p>
+                <div class="partner-grid">
+                    <a href="https://docs.google.com/document/u/0/d/10-Zg4dTggCtMmzdQF507GFY3zKamHPaHexe7BhviD_4/edit" target="_blank" class="partner-card hover-lift">
+                        <div class="partner-logo">
+                            <img src="https://img.freepik.com/free-vector/abstract-company-logo-with-colorful-design_1017-4392.jpg" alt="Partner Logo" class="w-24 h-24 object-cover glow-on-hover" />
+                        </div>
+                        <p class="partner-name">即將公開</p>
+                    </a>
+
+                    <!-- 新增合作夥伴卡片 -->
+                    <a href="#" class="partner-card hover-lift">
+                        <div class="partner-logo">
+                            <img src="https://img.freepik.com/free-vector/abstract-logo-flame-shape_1043-44.jpg" alt="Partner Logo" class="w-24 h-24 object-cover glow-on-hover" />
+                        </div>
+                        <p class="partner-name">即將公開</p>
+                    </a>
+
+                    <a href="#" class="partner-card hover-lift">
+                        <div class="partner-logo">
+                            <img src="https://img.freepik.com/free-vector/abstract-logo-geometric-shapes_23-2148810236.jpg" alt="Partner Logo" class="w-24 h-24 object-cover glow-on-hover" />
+                        </div>
+                        <p class="partner-name">即將公開</p>
+                    </a>
+
+                    <a href="#" class="partner-card hover-lift">
+                        <div class="partner-logo">
+                            <img src="https://img.freepik.com/free-vector/business-company-logo-design-vector_23-2147857144.jpg" alt="Partner Logo" class="w-24 h-24 object-cover glow-on-hover" />
+                        </div>
+                        <p class="partner-name">即將公開</p>
+                    </a>
                 </div>
-                <p class="text-gray-700 text-center mb-8">我們與各領域的合作夥伴共同合作，打造台灣自主的大型語言模型。</p>
-                <div class="text-center">
-                    <a href="https://docs.google.com/document/u/0/d/10-Zg4dTggCtMmzdQF507GFY3zKamHPaHexe7BhviD_4/edit" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 hover-underline">
-                        「台灣製造」大型語言模型計劃 | 資料授權合作夥伴（即將公開）
-                        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
+                <div class="text-center mt-8">
+                    <a href="https://docs.google.com/document/u/0/d/10-Zg4dTggCtMmzdQF507GFY3zKamHPaHexe7BhviD_4/edit" target="_blank" class="btn-outline">
+                        查看所有合作夥伴
                     </a>
                 </div>
             </div>
         </div>
+        <div class="wave wave-bottom"></div>
     </section>
 
     <!-- News Section -->
-    <section id="news" class="py-16 bg-white section-animate">
+    <section id="news" class="py-16 bg-white dotted-bg">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">新聞報導</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center title-underline">新聞報導</h2>
             <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-lg shadow-md p-8 border-t-4 border-blue-600 card-hover">
-                    <div class="flex items-center mb-6">
-                        <div class="text-blue-600 mr-4">
-                            <i class="fas fa-newspaper text-4xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold">媒體報導</h3>
+                <div class="news-card hover-lift mb-6">
+                    <div class="news-content">
+                        <h3 class="text-xl font-semibold mb-3">FreeSEED計劃相關媒體報導</h3>
+                        <p class="text-gray-600 mb-4">
+                            查看媒體對FreeSEED計劃的相關報導，了解計劃的最新進展和影響力。
+                        </p>
+                        <a href="https://docs.google.com/document/u/0/d/1TbV99kvHbHgBB7st1ry8e8_CVQrPhM4KoksFSNIpz9s/edit" target="_blank" class="btn-outline">
+                            <i class="fas fa-newspaper mr-2"></i> 查看所有報導
+                        </a>
                     </div>
-                    <p class="text-gray-700 mb-6">關注FreeSEED計劃的相關新聞報導與媒體採訪。</p>
-                    <a href="https://docs.google.com/document/u/0/d/1TbV99kvHbHgBB7st1ry8e8_CVQrPhM4KoksFSNIpz9s/edit" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 hover-underline">
-                        查看「台灣製造」大型語言模型計劃 | 媒體報導
-                        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
+                    <img src="https://img.freepik.com/free-photo/close-up-recording-video-with-smartphone-during-press-conference_8353-10516.jpg" alt="Media Coverage" class="hidden md:block w-40 h-40 object-cover rounded-lg shadow-md ml-6 glow-on-hover" />
+                </div>
+
+                <!-- 新增新聞卡片 -->
+                <div class="news-card hover-lift">
+                    <div class="news-content">
+                        <h3 class="text-xl font-semibold mb-3">最新活動預告</h3>
+                        <p class="text-gray-600 mb-4">
+                            關注FreeSEED計劃的最新活動，包括研討會、工作坊、線上直播等，與團隊成員面對面交流。
+                        </p>
+                        <a href="#" class="btn-outline">
+                            <i class="fas fa-calendar-alt mr-2"></i> 查看活動行事曆
+                        </a>
+                    </div>
+                    <img src="https://img.freepik.com/free-photo/audience-listens-speaker-business-conference_8353-9935.jpg" alt="Events" class="hidden md:block w-40 h-40 object-cover rounded-lg shadow-md ml-6 glow-on-hover" />
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white section-animate">
+    <section id="contact" class="py-16 bg-gray-50 wave-container relative">
+        <div class="wave wave-top"></div>
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">聯絡資訊</h2>
-            <div class="max-w-3xl mx-auto bg-white bg-opacity-10 rounded-lg p-8 backdrop-filter backdrop-blur-sm card-hover">
-                <div class="flex flex-col items-center mb-8">
-                    <h3 class="text-2xl font-semibold mb-2">薛良斌</h3>
-                    <p class="text-blue-200">專案負責人</p>
+            <h2 class="text-3xl font-bold mb-12 text-center title-underline">聯絡我們</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="contact-card hover-lift">
+                    <div class="contact-info">
+                        <div class="flex items-center justify-center mb-6">
+                            <img src="https://img.freepik.com/free-vector/people-waving-hand-illustration-concept_52683-29825.jpg" alt="Contact" class="w-32 h-32 object-cover rounded-full border-4 border-primary-100 glow-on-hover" />
+                        </div>
+                        <h3 class="text-xl font-semibold mb-6 text-center">布丁</h3>
+                        <div class="contact-methods">
+                            <a href="https://www.linkedin.com/in/iamhlb/" target="_blank" class="contact-link">
+                                <i class="fab fa-linkedin rotate-icon"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.facebook.com/iamhlb/" target="_blank" class="contact-link">
+                                <i class="fab fa-facebook rotate-icon"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://line.me/ti/p/XnUpIfX2DC" target="_blank" class="contact-link">
+                                <i class="fab fa-line rotate-icon"></i>
+                                <span>Line</span>
+                            </a>
+                            <a href="mailto:hlb@meetandy.ai" class="contact-link">
+                                <i class="fas fa-envelope rotate-icon"></i>
+                                <span>hlb@meetandy.ai</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="https://www.linkedin.com/in/iamhlb/" target="_blank" class="flex items-center bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-4 transition-colors duration-200">
-                        <i class="fab fa-linkedin text-2xl mr-3"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://www.facebook.com/iamhlb/" target="_blank" class="flex items-center bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-4 transition-colors duration-200">
-                        <i class="fab fa-facebook text-2xl mr-3"></i>
-                        <span>Facebook</span>
-                    </a>
-                    <a href="https://line.me/ti/p/XnUpIfX2DC" target="_blank" class="flex items-center bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-4 transition-colors duration-200">
-                        <i class="fab fa-line text-2xl mr-3"></i>
-                        <span>Line</span>
-                    </a>
-                    <a href="mailto:hlb@meetandy.ai" class="flex items-center bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg p-4 transition-colors duration-200">
-                        <i class="fas fa-envelope text-2xl mr-3"></i>
-                        <span>hlb@meetandy.ai</span>
-                    </a>
-                </div>
+            </div>
+        </div>
+        <div class="wave wave-bottom"></div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-primary-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">加入FreeSEED，共同打造台灣的AI未來！</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                無論您是AI研究員、軟體工程師、語言學家、資料科學家，還是對AI技術有熱情的任何人，我們都歡迎您加入FreeSEED計劃，一起為台灣的AI發展貢獻力量。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#tasks" class="btn-primary bg-white text-primary-700 hover:bg-gray-100 pulse">
+                    <i class="fas fa-users mr-2"></i> 加入計劃
+                </a>
+                <a href="mailto:hlb@meetandy.ai" class="btn-outline border-white text-white hover:bg-primary-700">
+                    <i class="fas fa-envelope mr-2"></i> 聯繫我們
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <h2 class="text-2xl font-bold">FreeSEED</h2>
-                    <p class="text-gray-400">「台灣製造」大型語言模型計劃</p>
+                    <div class="text-xl font-bold">FreeSEED</div>
+                    <div class="text-sm text-gray-400">「台灣製造」 LLM大型語言模型計劃</div>
                 </div>
-                <div>
-                    <ul class="flex flex-wrap space-x-2 md:space-x-4">
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-200 hover-underline">關於計劃</a></li>
-                        <li><a href="#documents" class="text-gray-400 hover:text-white transition-colors duration-200 hover-underline">計劃文件</a></li>
-                        <li><a href="#tasks" class="text-gray-400 hover:text-white transition-colors duration-200 hover-underline">任務大廳</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-200 hover-underline">聯絡我們</a></li>
-                    </ul>
+                <div class="flex flex-wrap justify-center md:justify-end space-x-4">
+                    <a href="#about" class="footer-link">關於計劃</a>
+                    <a href="#documents" class="footer-link">計劃文件</a>
+                    <a href="#tasks" class="footer-link">任務大廳</a>
+                    <a href="#partners" class="footer-link">合作夥伴</a>
+                    <a href="#news" class="footer-link">新聞報導</a>
+                    <a href="#contact" class="footer-link">聯絡我們</a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
-                <p>&copy; 2023 FreeSEED「台灣製造」大型語言模型計劃. All rights reserved.</p>
+            <div class="mt-8 text-center text-sm text-gray-400">
+                &copy; 2023 FreeSEED - 「台灣製造」 LLM大型語言模型計劃. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
